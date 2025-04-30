@@ -21,4 +21,17 @@ public class Temperatura {
 		double fahrenheit = celsius * 9 / 5;
 		return fahrenheit;
 	}
+	
+	public void mostrarConversao() {
+		
+		System.out.println("Fahrenheit:" + converterParaFahrenheit());
+		System.out.println("Kelvin:" + converterParaKelvin());
+		
+			
+	}
+	
+	
+	
 }
+
+

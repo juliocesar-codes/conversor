@@ -22,16 +22,6 @@ public class Temperatura {
 		return fahrenheit;
 	}
 	
-	public void mostrarConversao() {
-		
-		System.out.println("Fahrenheit:" + converterParaFahrenheit());
-		System.out.println("Kelvin:" + converterParaKelvin());
-		
-			
-	}
-	
-	
-	
 }
 
 

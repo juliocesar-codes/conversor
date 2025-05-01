@@ -1,6 +1,7 @@
 package br.dev.julio.temperatura.gui;
 
 import javax.swing.JTextField;
+import br.dev.julio.temperatura.TemperaturaApp;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -23,7 +24,7 @@ public class TelaConversor {
 		
 		
 		JFrame tela = new JFrame();
-		tela.setTitle("Tabuada");
+		tela.setTitle("Conversor de Temperatura");
 		tela.setSize(400, 700);
 		tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		tela.setLayout(null);
@@ -35,18 +36,19 @@ public class TelaConversor {
 		
 		textEntradaCelsius = new JTextField();
 		textEntradaCelsius.setText("");
-		textEntradaCelsius.setBounds(30, 20, 200, 60);
+		textEntradaCelsius.setBounds(20, 45, 340, 30);
+		
 		
 		buttonFahrenheit = new JButton();
 		buttonFahrenheit.setText("FAHREINHEIT");
-		buttonFahrenheit.setBounds(20, 200, 130, 40);
+		buttonFahrenheit.setBounds(20, 80, 150, 40);
 		
 		buttonKelvin = new JButton();
 		buttonKelvin.setText("KELVIN");
-		buttonKelvin.setBounds(220, 150, 130, 40);
+		buttonKelvin.setBounds(200, 80, 160, 40);
 		
 		labelResultado = new JLabel();
-		labelResultado.setText(" ");
+		labelResultado.setText("");
 		labelResultado.setBounds(20, 110, 135, 30);
 		
 		labelErro = new JLabel();
@@ -70,12 +72,26 @@ public class TelaConversor {
 				String celsius = textEntradaCelsius.getText();
 				double contaCelsius = Double.valueOf(celsius);
 				temperatura.setCelsius(contaCelsius);
-				
-				temperatura.mostrarConversao();
+			
 			
 		
-		}
+			}
 		});
+		
+buttonKelvin.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				Temperatura temperatura = new Temperatura();
+				String celsius = textEntradaCelsius.getText();
+				double contaCelsius = Double.valueOf(celsius);
+				temperatura.setCelsius(contaCelsius);
+				
+			}
+		});
+		
 		tela.setVisible(true);
 	}
 }
